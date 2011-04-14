@@ -5,6 +5,10 @@
   showing each day all the gems newly released and updated on
   %a{:href => "http://rubygems.org"} RubyGems
 
+%p
+  Source code is on
+  %a{:href => "https://github.com/Florent2/gems-summary"} GitHub
+
 %h2 Example for yesterday:
 
 = haml :_day, {}, :new_gems_versions => @yesterday_new_gems_versions, :updated_gems_versions => @yesterday_updated_gems_versions
