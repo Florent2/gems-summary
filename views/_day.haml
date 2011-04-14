@@ -1,0 +1,19 @@
+- page_url_for_rss_readers ||= nil
+- if page_url_for_rss_readers
+  %p
+    This gems list is more readable on
+    %a{:href => page_url_for_rss_readers}= page_url_for_rss_readers
+
+- unless new_gems_versions.empty?
+  %h2 New gems
+  %ol
+    - new_gems_versions.each do |version|
+      %li= display_version version
+
+- if updated_gems_versions.empty?
+  %p There was no updated gems this day.
+- else
+  %h2 Updated gems
+  %ol
+    - updated_gems_versions.each do |version|
+      %li= display_version version
