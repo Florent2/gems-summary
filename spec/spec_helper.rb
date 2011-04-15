@@ -19,7 +19,7 @@ RSpec::Matchers.define :require do |attribute|
   match do |model|
     instance = model.new
     instance.valid?
-    instance.errors[attribute].should == ["#{attribute.to_s.capitalize} must not be blank"]
+    instance.errors[attribute].should == ["#{DataMapper::Inflector.humanize attribute} must not be blank"]
   end
 end
 
