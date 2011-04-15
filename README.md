@@ -3,7 +3,7 @@ Gems Summary
 
 The RubyGems feed and Twitter stream do not distinguish between new gems and updated gems, and announce each new version of a gem.
 
-It was hard for me to follow. That's why I created [Gems Summary](http://gems-summary.heroku.com). It generates everyday a feed post listing separately the new gems released on RubyGems and the updated gems. If a gem is updated several times during a single day, it is mentionned only once in the post.
+It was hard for me to follow. That's why I created [Gems Summary](http://gems-summary.heroku.com). It generates everyday a feed post listing separately the new gems released on RubyGems and the updated gems. If a gem is updated several times during a single day, it is mentioned only once in the post.
 
 It's a Sinatra application getting the notifications of new gem versions through a [RubyGems webhook](https://rubygems.org/pages/api_docs#webhook). It runs with Ruby 1.9.2.
 
