@@ -5,6 +5,8 @@
     %a{:href => page_url_for_rss_readers}= page_url_for_rss_readers
 
 - unless new_gems_versions.empty?
+  - unless updated_gems_versions.empty?
+    %a{:href => "#updated"} Jump to updated gems
   %h2 New gems
   %ol
     - new_gems_versions.each do |version|
@@ -13,6 +15,7 @@
 - if updated_gems_versions.empty?
   %p There was no updated gems this day.
 - else
+  %a{:name => "updated"}
   %h2 Updated gems
   %ol
     - updated_gems_versions.each do |version|
