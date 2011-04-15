@@ -26,9 +26,8 @@ if production? && ENV["HOPTOAD_API_KEY"]
 end
 
 get "/" do
-  @feed_url                         = if production? then "http://feeds.feedburner.com/GemsSummary" else "/daily.rss" end
-  @yesterday_new_gems_versions      = Version.new_on Date.today.prev_day
-  @yesterday_updated_gems_versions  = Version.updated_on Date.today.prev_day
+  @feed_url     = if production? then "http://feeds.feedburner.com/GemsSummary" else "/daily.rss" end
+  @latest_dates = (Date.today.prev_day - 6)..Date.today.prev_day
   haml :index
 end
 
