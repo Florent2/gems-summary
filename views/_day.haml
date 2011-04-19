@@ -5,7 +5,7 @@
     %a{:href => page_url_for_rss_readers}= page_url_for_rss_readers
 
 - unless new_gems_versions.empty?
-  - unless updated_gems_versions.empty?
+  - unless updated_gems_versions.empty? || page_url_for_rss_readers
     %a{:href => "#updated"} Jump to updated gems
   %h2 New gems
   %ol
