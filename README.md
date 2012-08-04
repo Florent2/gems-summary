@@ -1,13 +1,15 @@
 Gems Summary
 ============
 
+**Update 2012/07/04**: Spring cleaning! I've removed the Heroku application and the RSS feed, I had no more use of it and I think no else was reading the feed.
+
 The RubyGems feed and Twitter stream do not distinguish between new gems and updated gems, and announce each new version of a gem.
 
 It was hard for me to follow. That's why I created [Gems Summary](http://gems-summary.heroku.com). It generates everyday a feed post listing separately the new gems released on RubyGems and the updated gems. If a gem is updated several times during a single day, it is mentioned only once in the post.
 
 It's a Sinatra application getting the notifications of new gem versions through a [RubyGems webhook](https://rubygems.org/pages/api_docs#webhook). It runs with Ruby 1.9.2.
 
-In case you want to contribute to the application or customize it to create your own feed, here is how to install and run it locally: 
+In case you want to contribute to the application or customize it to create your own feed, here is how to install and run it locally:
 
 1. clone the repository
 2. run `bundle install`
@@ -18,5 +20,3 @@ In case you want to contribute to the application or customize it to create your
 You can run the tests with `bundle exec spec/`.
 
 Error handling is basic: every failed save operations raises an exception. In production it is catched by HopToad.
-
-
